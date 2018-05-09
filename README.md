@@ -43,4 +43,4 @@ ${BIN} ${OPTS}
 
 #### example（use obfs tls,please put your ssl cert file to /tmp/cert.pem /tmp/key.pem）: 
     docker run --restart always -d -p 8080:8080/tcp -p 8080:8080/udp --name ss-obfs-docker -e PORT="8080" -e PASSWORD="123456" -e SS_OPTS="-u -t 300 -d 8.8.8.8" -e PLUGIN_OPTS="obfs=http;failover=www.bing.com" letssudormrf/ss-obfs-docker
-    docker run --restart always -d -p 8080:8080/tcp -p 8080:8080/udp --name ss-obfs-docker -e PORT="8080" -e PASSWORD="123456" -e SS_OPTS="-u -t 300 -d 8.8.8.8" -e PLUGIN_OPTS="obfs=tls;failover=www.bing.com:443" letssudormrf/ss-obfs-docker
+    docker run --restart always -d -p 443:443/tcp -p 443:443/udp --name ss-obfs-docker -e PORT="443" -e PASSWORD="123456" -e SS_OPTS="-u -t 300 -d 8.8.8.8" -e PLUGIN_OPTS="obfs=tls;failover=www.bing.com:443" letssudormrf/ss-obfs-docker
